@@ -1,4 +1,4 @@
-import { input_array } from "../globals";
+import { input_array, opertors_array } from "../globals";
 
 const Structure = ({ handleCalculator }) => {
   const styled = {
@@ -20,7 +20,7 @@ const Structure = ({ handleCalculator }) => {
     >
       {input_array.map((item) => {
         return (
-          <>
+          <div>
             <button
               className="text-cyan-200 p-[4px] border-[1px] rounded-[6px] bg-slate-900 
                  hover:bg-gray-400 active:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400
@@ -30,9 +30,26 @@ const Structure = ({ handleCalculator }) => {
             >
               {item}
             </button>
-          </>
+          </div>
         );
       })}
+      <div>
+        {opertors_array.map((item) => {
+          return (
+            <div>
+              <button
+                className="text-cyan-200 p-[4px] border-[1px] rounded-[6px] bg-slate-900 
+                 hover:bg-gray-400 active:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400
+                 boxShadow
+                "
+                onClick={() => handleCalculator(item)}
+              >
+                {item}
+              </button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
