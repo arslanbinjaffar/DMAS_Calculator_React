@@ -3,6 +3,8 @@ import InputContainer from "./components/InputComponent";
 import Structure from "./components/structure";
 
 function App() {
+  const [prevInput, setPrevInput] = useState([]);
+  const [currentInput, setCurrentInput] = useState();
   const [getValue, setGetValue] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [operator, setOperator] = useState("");
